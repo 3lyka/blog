@@ -1,7 +1,0 @@
-База данных - 
-	users - done
-	posts
-	categories - done (ВСЕГДА СОЗДАВАЙ ПЕРЕД ПОСТАМИ!!!!)
-	tags
-controller
-view

@@ -14,7 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 /* mainpage */
-Route::group(['namespace' => 'Main'], function(){
-		Route::get('/', 'IndexController')->name('main.index');
-		Route::get('/show', 'ShowController')->name('main.show');
+
+Route::group(['namespace' => 'Main'], function () {
+	Route::get('/', 'IndexController')->name('main.index');
+	Route::get('/show', 'ShowController')->name('main.show');
+});
+
+Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
+	Route::group(['namespace' => 'Main'], function () {
+		Route::get('/', 'IndexController')->name('admin.main.index');
+	});
 });

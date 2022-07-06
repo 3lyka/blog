@@ -12,33 +12,16 @@
 				<img src="images/avatar-1.svg" alt="Bolby" class="mb-4" />
 
 				<!-- info -->
-				<h1 class="mb-2 mt-0">Bolby Doe</h1>
-				<span>I'm a <span class="text-rotating">UI/UX designer, Front-End developer, Photography
-						lover</span></span>
-
-				<!-- social icons -->
-				<ul class="social-icons light list-inline mb-0 mt-4">
-					<li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
-					<li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-					<li class="list-inline-item"><a href="#"><i class="fab fa-behance"></i></a></li>
-					<li class="list-inline-item"><a href="#"><i class="fab fa-dribbble"></i></a></li>
-					<li class="list-inline-item"><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-				</ul>
-
-				<!-- buttons -->
-				<div class="mt-4">
-					<a href="#contact" class="btn btn-default">Hire me</a>
-				</div>
+				<h1 class="mb-2 mt-0">Гараев Вадим</h1>
+				<span>I'm a <span class="text-rotating">UI/UX designer, Web developer</span></span> <!-- если добавлять тут текст через запятую, будет меняться -->
 			</div>
 
 			<!-- scroll down mouse wheel -->
 			<div class="scroll-down">
-				<a href="#about" class="mouse-wrapper">
-					<span>Scroll Down</span>
-					<span class="mouse">
-						<span class="wheel"></span>
-					</span>
-				</a>
+
+				<span class="mouse">
+					<span class="wheel"></span>
+				</span>
 			</div>
 
 			<!-- parallax layers -->
@@ -105,7 +88,7 @@
 		<div class="container">
 
 			<!-- section title -->
-			<h2 class="section-title wow fadeInUp">About Me</h2>
+			<h2 class="section-title wow fadeInUp">Обо мне</h2>
 
 			<div class="spacer" data-height="60"></div>
 
@@ -124,12 +107,9 @@
 						<div class="row">
 							<div class="col-md-6">
 								<!-- about text -->
-								<p>I am Bolby Doe, web developer from London, United Kingdom. I have rich experience
-									in web site design and building and customization, also I am good at WordPress.
+								<p>I am Гараев Вадим, web developer from London, United Kingdom. I have rich experience
+									in web site design and building and customization, <span>also I am good at <span class="text-rotating">WordPress, Laravel 8, Bootstap 5, SaSS, HTML5, Babel, Vue3</span></span>
 								</p>
-								<div class="mt-3">
-									<a href="#" class="btn btn-default">Download CV</a>
-								</div>
 								<div class="spacer d-md-none d-lg-none" data-height="30"></div>
 							</div>
 							<div class="col-md-6">
@@ -137,10 +117,10 @@
 								<div class="skill-item">
 									<div class="skill-info clearfix">
 										<h4 class="float-left mb-3 mt-0">Development</h4>
-										<span class="float-right">85%</span>
+										<span class="float-right">73%</span>
 									</div>
 									<div class="progress">
-										<div class="progress-bar data-background" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85" data-color="#FFD15C">
+										<div class="progress-bar data-background" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="73" data-color="#FFD15C">
 										</div>
 									</div>
 									<div class="spacer" data-height="20"></div>
@@ -150,23 +130,23 @@
 								<div class="skill-item">
 									<div class="skill-info clearfix">
 										<h4 class="float-left mb-3 mt-0">UI/UX design</h4>
-										<span class="float-right">95%</span>
+										<span class="float-right">48%</span>
 									</div>
 									<div class="progress">
-										<div class="progress-bar data-background" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="95" data-color="#FF4C60">
+										<div class="progress-bar data-background" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="48" data-color="#FF4C60">
 										</div>
 									</div>
 									<div class="spacer" data-height="20"></div>
 								</div>
 
 								<!-- skill item -->
-								<div class="skill-item">
+																<div class="skill-item">
 									<div class="skill-info clearfix">
-										<h4 class="float-left mb-3 mt-0">Photography</h4>
-										<span class="float-right">70%</span>
+										<h4 class="float-left mb-3 mt-0">Project-manager</h4>
+										<span class="float-right">89%</span>
 									</div>
 									<div class="progress">
-										<div class="progress-bar data-background" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70" data-color="#6C6CE5">
+										<div class="progress-bar data-background" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="89" data-color="#6C6CE5">
 										</div>
 									</div>
 								</div>
@@ -187,7 +167,7 @@
 					<div class="fact-item">
 						<span class="icon icon-fire"></span>
 						<div class="details">
-							<h3 class="mb-0 mt-0 number"><em class="count">198</em></h3>
+							<h3 class="mb-0 mt-0 number"><em class="count">7</em></h3>
 							<p class="mb-0">Projects completed</p>
 						</div>
 					</div>
@@ -200,7 +180,7 @@
 						<span class="icon icon-cup"></span>
 						<div class="details">
 							<h3 class="mb-0 mt-0 number"><em class="count">5670</em></h3>
-							<p class="mb-0">Cup of coffee</p>
+							<p class="mb-0">Чашек кофе</p>
 						</div>
 					</div>
 					<div class="spacer d-md-none d-lg-none" data-height="30"></div>
@@ -211,8 +191,8 @@
 					<div class="fact-item">
 						<span class="icon icon-people"></span>
 						<div class="details">
-							<h3 class="mb-0 mt-0 number"><em class="count">427</em></h3>
-							<p class="mb-0">Satisfied clients</p>
+							<h3 class="mb-0 mt-0 number"><em class="count">6</em></h3>
+							<p class="mb-0">Довольных клиентов</p>
 						</div>
 					</div>
 					<div class="spacer d-md-none d-lg-none" data-height="30"></div>
@@ -223,12 +203,50 @@
 					<div class="fact-item">
 						<span class="icon icon-badge"></span>
 						<div class="details">
-							<h3 class="mb-0 mt-0 number"><em class="count">35</em></h3>
-							<p class="mb-0">Nominees winner</p>
+							<h3 class="mb-0 mt-0 number"><em class="count">5</em></h3>
+							<p class="mb-0">Номенантные победы</p>
 						</div>
 					</div>
 				</div>
 
+			</div>
+
+		</div>
+
+	</section>
+
+	<!-- section blog -->
+	<section id="blog">
+
+		<div class="container">
+
+			<!-- section title -->
+			<h2 class="section-title wow fadeInUp">Latest Posts</h2>
+
+			<div class="spacer" data-height="60"></div>
+
+			<div class="row blog-wrapper">
+
+				<div class="col-md-4">
+					<!-- blog item -->
+					<div class="blog-item rounded bg-dark shadow-dark wow fadeIn">
+						<div class="thumb">
+							<a href="{{route('main.show')}}">
+								<span class="category">Reviews</span>
+							</a>
+							<a href="{{route('main.show')}}">
+								<img src="images/blog/1.svg" alt="blog-title" />
+							</a>
+						</div>
+						<div class="details">
+							<h4 class="my-0 title"><a href="{{route('main.show')}}">5 Best App Development Tool for Your Project</a></h4>
+							<ul class="list-inline meta mb-0 mt-2">
+								<li class="list-inline-item">09 February, 2020</li>
+								<li class="list-inline-item">Bolby</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 			</div>
 
 		</div>
@@ -273,18 +291,13 @@
 					<!-- service box -->
 					<div class="service-box rounded data-background padding-30 text-center text-light shadow-pink" data-color="#F97B8B">
 						<img src="images/service-3.svg" alt="UI/UX design" />
-						<h3 class="mb-3 mt-0">Photography</h3>
+						<h3 class="mb-3 mt-0">Project-manager</h3>
 						<p class="mb-0">Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo
 							ligula eget.</p>
 					</div>
 				</div>
 
 			</div>
-
-			<div class="mt-5 text-center">
-				<p class="mb-0">Looking for a custom job? <a href="#contact">Click here</a> to contact me! 👋</p>
-			</div>
-
 		</div>
 
 	</section>
@@ -394,417 +407,6 @@
 
 	</section>
 
-	<!-- section works -->
-	<section id="works">
-
-		<div class="container">
-
-			<!-- section title -->
-			<h2 class="section-title wow fadeInUp">Recent works</h2>
-
-			<div class="spacer" data-height="60"></div>
-
-			<!-- portfolio filter (desktop) -->
-			<ul class="portfolio-filter list-inline wow fadeInUp">
-				<li class="current list-inline-item" data-filter="*">Everything</li>
-				<li class="list-inline-item" data-filter=".creative">Creative</li>
-				<li class="list-inline-item" data-filter=".art">Art</li>
-				<li class="list-inline-item" data-filter=".design">Design</li>
-				<li class="list-inline-item" data-filter=".branding">Branding</li>
-			</ul>
-
-			<!-- portfolio filter (mobile) -->
-			<div class="pf-filter-wrapper">
-				<select class="portfolio-filter-mobile">
-					<option value="*">Everything</option>
-					<option value=".creative">Creative</option>
-					<option value=".art">Art</option>
-					<option value=".design">Design</option>
-					<option value=".branding">Branding</option>
-				</select>
-			</div>
-
-			<!-- portolio wrapper -->
-			<div class="row portfolio-wrapper">
-
-				<!-- portfolio item -->
-				<div class="col-md-4 col-sm-6 grid-item art">
-					<a href="images/works/1.svg" class="work-image">
-						<div class="portfolio-item rounded shadow-dark">
-							<div class="details">
-								<span class="term">Art</span>
-								<h4 class="title">Project Managment Illustration</h4>
-								<span class="more-button"><i class="icon-magnifier-add"></i></span>
-							</div>
-							<div class="thumb">
-								<img src="images/works/1.svg" alt="Portfolio-title" />
-								<div class="mask"></div>
-							</div>
-						</div>
-					</a>
-				</div>
-
-				<!-- portfolio item -->
-				<div class="col-md-4 col-sm-6 grid-item creative design">
-					<a href="#small-dialog" class="work-content">
-						<div class="portfolio-item rounded shadow-dark">
-							<div class="details">
-								<span class="term">Creative</span>
-								<h4 class="title">Guest App Walkthrough Screens</h4>
-								<span class="more-button"><i class="icon-options"></i></span>
-							</div>
-							<div class="thumb">
-								<img src="images/works/2.svg" alt="Portfolio-title" />
-								<div class="mask"></div>
-							</div>
-						</div>
-					</a>
-					<div id="small-dialog" class="white-popup zoom-anim-dialog mfp-hide">
-						<img src="images/single-work.svg" alt="Title" />
-						<h2>Guest App Walkthrough Screens</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam hendrerit nibh in massa
-							semper rutrum. In rhoncus eleifend mi id tempus.</p>
-						<p>Donec consectetur, libero at pretium euismod, nisl felis lobortis urna, id tristique nisl
-							lectus eget ligula.</p>
-						<a href="#" class="btn btn-default">View on Dribbble</a>
-					</div>
-				</div>
-
-				<!-- portfolio item -->
-				<div class="col-md-4 col-sm-6 grid-item branding">
-					<a href="https://www.youtube.com/watch?v=qf9z4ulfmYw" class="work-video">
-						<div class="portfolio-item rounded shadow-dark">
-							<div class="details">
-								<span class="term">Branding</span>
-								<h4 class="title">Delivery App Wireframe</h4>
-								<span class="more-button"><i class="icon-camrecorder"></i></span>
-							</div>
-							<div class="thumb">
-								<img src="images/works/3.svg" alt="Portfolio-title" />
-								<div class="mask"></div>
-							</div>
-						</div>
-					</a>
-				</div>
-
-				<!-- portfolio item -->
-				<div class="col-md-4 col-sm-6 grid-item creative">
-					<a href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/240233494&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true" class="work-video">
-						<div class="portfolio-item rounded shadow-dark">
-							<div class="details">
-								<span class="term">Creative</span>
-								<h4 class="title">Onboarding Motivation</h4>
-								<span class="more-button"><i class="icon-music-tone-alt"></i></span>
-							</div>
-							<div class="thumb">
-								<img src="images/works/4.svg" alt="Portfolio-title" />
-								<div class="mask"></div>
-							</div>
-						</div>
-					</a>
-				</div>
-
-				<!-- portfolio item -->
-				<div class="col-md-4 col-sm-6 grid-item art branding">
-					<a href="#gallery-1" class="gallery-link">
-						<div class="portfolio-item rounded shadow-dark">
-							<div class="details">
-								<span class="term">Art, Branding</span>
-								<h4 class="title">iMac Mockup Design</h4>
-								<span class="more-button"><i class="icon-picture"></i></span>
-							</div>
-							<div class="thumb">
-								<img src="images/works/5.svg" alt="Portfolio-title" />
-								<div class="mask"></div>
-							</div>
-						</div>
-					</a>
-					<div id="gallery-1" class="gallery mfp-hide">
-						<a href="images/works/5.svg"></a>
-						<a href="images/works/4.svg"></a>
-					</div>
-				</div>
-
-				<!-- portfolio item -->
-				<div class="col-md-4 col-sm-6 grid-item creative design">
-					<a href="https://themeforest.net/user/pxlsolutions/portfolio" target="_blank">
-						<div class="portfolio-item rounded shadow-dark">
-							<div class="details">
-								<span class="term">Creative, Design</span>
-								<h4 class="title">Game Store App Concept</h4>
-								<span class="more-button"><i class="icon-link"></i></span>
-							</div>
-							<div class="thumb">
-								<img src="images/works/6.svg" alt="Portfolio-title" />
-								<div class="mask"></div>
-							</div>
-						</div>
-					</a>
-				</div>
-
-			</div>
-
-			<!-- more button -->
-			<div class="load-more text-center mt-4">
-				<a href="javascript:" class="btn btn-default"><i class="fas fa-spinner"></i> Load more</a>
-				<!-- numbered pagination (hidden for infinite scroll) -->
-				<ul class="portfolio-pagination list-inline d-none">
-					<li class="list-inline-item">1</li>
-					<li class="list-inline-item"><a href="works-2.html">2</a></li>
-				</ul>
-			</div>
-
-		</div>
-
-	</section>
-
-	<!-- section prices -->
-	<section id="prices">
-
-		<div class="container">
-
-			<!-- section title -->
-			<h2 class="section-title wow fadeIn">Pricing Plans</h2>
-
-			<div class="spacer" data-height="60"></div>
-
-			<div class="row">
-
-				<div class="col-md-4 pe-md-0 mt-md-4 mt-0">
-					<!-- price item -->
-					<div class="price-item bg-dark rounded shadow-dark text-center">
-						<img src="images/price-1.svg" alt="Regular" />
-						<h2 class="plan">Basic</h2>
-						<p>A Simple option but powerful to manage your business</p>
-						<p>Email support</p>
-						<h3 class="price"><em>$</em>9<span>Month</span></h3>
-						<a href="#" class="btn btn-default">Get Started</a>
-					</div>
-				</div>
-
-				<div class="col-md-4 px-md-0 my-4 my-md-0">
-					<!-- price item recommended-->
-					<div class="price-item bg-dark rounded shadow-dark text-center best">
-						<span class="badge">Recommended</span>
-						<img src="images/price-2.svg" alt="Premium" />
-						<h2 class="plan">Premium</h2>
-						<p>Unlimited product including apps integrations and more features</p>
-						<p>Mon-Fri support</p>
-						<h3 class="price"><em>$</em>49<span>Month</span></h3>
-						<a href="#" class="btn btn-default">Get Started</a>
-					</div>
-				</div>
-
-				<div class="col-md-4 ps-md-0 mt-md-4 mt-0">
-					<!-- price item -->
-					<div class="price-item bg-dark rounded shadow-dark text-center">
-						<img src="images/price-3.svg" alt="Ultimate" />
-						<h2 class="plan">Ultimate</h2>
-						<p>A wise option for large companies and individuals</p>
-						<p>24/7 support</p>
-						<h3 class="price"><em>$</em>99<span>Month</span></h3>
-						<a href="#" class="btn btn-default">Get Started</a>
-					</div>
-				</div>
-
-			</div>
-
-		</div>
-
-	</section>
-
-	<!-- section testimonials -->
-	<section id="testimonials">
-
-		<div class="container">
-
-			<!-- section title -->
-			<h2 class="section-title wow fadeInUp">Clients & Reviews</h2>
-
-			<div class="spacer" data-height="60"></div>
-
-			<!-- testimonials wrapper -->
-			<div class="testimonials-wrapper">
-
-				<!-- testimonial item -->
-				<div class="testimonial-item text-center mx-auto">
-					<div class="thumb mb-3 mx-auto">
-						<img src="images/avatar-3.svg" alt="customer-name" />
-					</div>
-					<h4 class="mt-3 mb-0">John Doe</h4>
-					<span class="subtitle">Product designer at Dribbble</span>
-					<div class="bg-dark padding-30 shadow-dark rounded triangle-top position-relative mt-4">
-						<p class="mb-0">I enjoy working with the theme and learn so much. You guys make the process
-							fun and interesting. Good luck! 👍</p>
-					</div>
-				</div>
-
-				<!-- testimonial item -->
-				<div class="testimonial-item text-center mx-auto">
-					<div class="thumb mb-3 mx-auto">
-						<img src="images/avatar-1.svg" alt="customer-name" />
-					</div>
-					<h4 class="mt-3 mb-0">John Doe</h4>
-					<span class="subtitle">Product designer at Dribbble</span>
-					<div class="bg-dark padding-30 shadow-dark rounded triangle-top position-relative mt-4">
-						<p class="mb-0">I enjoy working with the theme and learn so much. You guys make the process
-							fun and interesting. Good luck! 🔥</p>
-					</div>
-				</div>
-
-			</div>
-
-			<div class="row">
-				<div class="col-md-3 col-6">
-					<!-- client item -->
-					<div class="client-item">
-						<div class="inner">
-							<img src="images/client-1-light.svg" alt="client-name" />
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-6">
-					<!-- client item -->
-					<div class="client-item">
-						<div class="inner">
-							<img src="images/client-2-light.svg" alt="client-name" />
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-6">
-					<!-- client item -->
-					<div class="client-item">
-						<div class="inner">
-							<img src="images/client-3-light.svg" alt="client-name" />
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-6">
-					<!-- client item -->
-					<div class="client-item">
-						<div class="inner">
-							<img src="images/client-4-light.svg" alt="client-name" />
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-6">
-					<!-- client item -->
-					<div class="client-item">
-						<div class="inner">
-							<img src="images/client-5-light.svg" alt="client-name" />
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-6">
-					<!-- client item -->
-					<div class="client-item">
-						<div class="inner">
-							<img src="images/client-6-light.svg" alt="client-name" />
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-6">
-					<!-- client item -->
-					<div class="client-item">
-						<div class="inner">
-							<img src="images/client-7-light.svg" alt="client-name" />
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-6">
-					<!-- client item -->
-					<div class="client-item">
-						<div class="inner">
-							<img src="images/client-8-light.svg" alt="client-name" />
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-
-	</section>
-
-	<!-- section blog -->
-	<section id="blog">
-
-		<div class="container">
-
-			<!-- section title -->
-			<h2 class="section-title wow fadeInUp">Latest Posts</h2>
-
-			<div class="spacer" data-height="60"></div>
-
-			<div class="row blog-wrapper">
-
-				<div class="col-md-4">
-					<!-- blog item -->
-					<div class="blog-item rounded bg-dark shadow-dark wow fadeIn">
-						<div class="thumb">
-							<a href="#">
-								<span class="category">Reviews</span>
-							</a>
-							<a href="#">
-								<img src="images/blog/1.svg" alt="blog-title" />
-							</a>
-						</div>
-						<div class="details">
-							<h4 class="my-0 title"><a href="#">5 Best App Development Tool for Your Project</a></h4>
-							<ul class="list-inline meta mb-0 mt-2">
-								<li class="list-inline-item">09 February, 2020</li>
-								<li class="list-inline-item">Bolby</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-4">
-					<!-- blog item -->
-					<div class="blog-item rounded bg-dark shadow-dark wow fadeIn">
-						<div class="thumb">
-							<a href="#">
-								<span class="category">Tutorial</span>
-							</a>
-							<a href="#">
-								<img src="images/blog/2.svg" alt="blog-title" />
-							</a>
-						</div>
-						<div class="details">
-							<h4 class="my-0 title"><a href="#">Common Misconceptions About Payment</a></h4>
-							<ul class="list-inline meta mb-0 mt-2">
-								<li class="list-inline-item">07 February, 2020</li>
-								<li class="list-inline-item">Bolby</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-4">
-					<!-- blog item -->
-					<div class="blog-item rounded bg-dark shadow-dark wow fadeIn">
-						<div class="thumb">
-							<a href="#">
-								<span class="category">Business</span>
-							</a>
-							<a href="#">
-								<img src="images/blog/3.svg" alt="blog-title" />
-							</a>
-						</div>
-						<div class="details">
-							<h4 class="my-0 title"><a href="#">3 Things To Know About Startup Business</a></h4>
-							<ul class="list-inline meta mb-0 mt-2">
-								<li class="list-inline-item">06 February, 2020</li>
-								<li class="list-inline-item">Bolby</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-
-			</div>
-
-		</div>
-
-	</section>
 	<div class="spacer" data-height="96"></div>
 
 </main>

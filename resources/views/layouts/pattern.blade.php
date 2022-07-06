@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="{{asset('css/animate.css')}}" type="text/css" media="all">
 	<link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}" type="text/css" media="all">
 	<link rel="stylesheet" href="{{asset('css/style.css')}}" type="text/css" media="all">
-	<title>{{ config('app.name', 'shop') }}</title>
+	<title>{{ config('app.name', 'blog') }}</title>
 </head>
 
 <body class="dark">
@@ -64,9 +64,9 @@
 				</button>
 			</div>
 			<!-- logo image -->
-			<div class="site-logo">
-				<a href="index-2-dark.html">
-					<img src="images/logo.svg" alt="Bolby" />
+			<div class="site-logo ms-4">
+				<a href="{{route('main.index')}}">
+					<img src="images/logo-b-light.svg" alt="logoVadim" />
 				</a>
 			</div>
 		</div>
@@ -77,8 +77,8 @@
 
 		<!-- logo image -->
 		<div class="site-logo">
-			<a href="index-2-dark.html">
-				<img src="images/logo-b-light.svg" alt="Bolby" />
+			<a href="{{route('main.index')}}">
+				<img src="images/logo-b-light.svg" alt="logoVadim" />
 			</a>
 		</div>
 
@@ -87,10 +87,9 @@
 			<ul class="vertical-menu scrollspy">
 				<li class="active"><a href="#home"><i class="icon-home"></i></a></li>
 				<li><a href="#about"><i class="icon-user-following"></i></a></li>
+				<li><a href="#blog"><i class="icon-note"></i></a></li>
 				<li><a href="#services"><i class="icon-briefcase"></i></a></li>
 				<li><a href="#experience"><i class="icon-graduation"></i></a></li>
-				<li><a href="#works"><i class="icon-layers"></i></a></li>
-				<li><a href="#blog"><i class="icon-note"></i></a></li>
 			</ul>
 		</nav>
 
