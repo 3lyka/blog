@@ -232,7 +232,7 @@
 					<div class="blog-item rounded bg-dark shadow-dark wow fadeIn">
 						<div class="thumb">
 							<a href="{{route('main.show')}}">
-								<span class="category">Reviews</span>
+								<span class="category">Category</span>
 							</a>
 							<a href="{{route('main.show')}}">
 								<img src="images/blog/1.svg" alt="blog-title" />
