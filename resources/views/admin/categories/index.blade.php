@@ -19,10 +19,10 @@
 		<div class="container-fluid">
 			<!-- Info boxes -->
 			<div class="row">
-				<div class="col-12 col-sm-6 col-md-3">
-					<p>Hi world!</p>
-					<!-- /.info-box -->
+				<div class="col-sm-6 col-md-3">
+					<button class="btn btn-primary  ps-5 pe-5"><a type="#" href="{{	route('admin.category.create')	}}" class="text-white">Добавить</a></button>
 				</div>
+
 				<!-- /.col -->
 			</div>
 			<!-- /.row -->
