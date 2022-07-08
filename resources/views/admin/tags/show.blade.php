@@ -7,7 +7,7 @@
 			<div class="row mb-2 ">
 				<div class="col-sm-12">
 					<h1 class="m-0">Редактирование категории</h1>
-					<h5 class="mt-2">{{$category->title}}
+					<h5 class="mt-2">{{$tag->title}}
 					</h5>
 				</div>
 			</div>
@@ -30,12 +30,12 @@
 							</thead>
 							<tbody>
 								<tr>
-									<td>{{$category->id}}</td>
-									<td>{{$category->title}}</td>
+									<td>{{$tag->id}}</td>
+									<td>{{$tag->title}}</td>
 									<td><span class="tag tag-success">Потом будет к каким постам привязано</span></td>
-									<td><a href="{{route('admin.category.edit', $category->id)}}"><span style="color:#B2FF00;"><i class="m-3 fas fa-pen"></i></span></a></td>
+									<td><a href="{{route('admin.tag.edit', $tag->id)}}"><span style="color:#B2FF00;"><i class="m-3 fas fa-pen"></i></span></a></td>
 									<td>
-										<form action="{{route('admin.category.delete',$category->id)}}" method="POST">
+										<form action="{{route('admin.tag.delete',$tag->id)}}" method="POST">
 											@csrf
 											@method('DELETE')
 											<button type="submit" class="border-0 bg-transparent">

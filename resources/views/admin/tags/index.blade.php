@@ -5,14 +5,22 @@
 	<div class="content-header">
 		<div class="container-fluid">
 			<div class="row mb-2 ">
-				<div class="col-sm-12">
-					<h1 class="m-0">Редактирование категории</h1>
-					<h5 class="mt-2">{{$category->title}}
-					</h5>
+				<div class="col-sm-6">
+					<h1 class="m-0">Теги</h1>
 				</div>
 			</div>
 		</div>
 	</div>
+	<section class="content ">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6 col-md-3">
+					<button class="btn btn-primary  ps-5 pe-5"><a href="{{	route('admin.tag.create')	}}" class="text-white">Добавить</a></button>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<section>
 		<div class="row mt-5">
 			<div class="col-9">
@@ -23,19 +31,24 @@
 								<tr>
 									<th>ID</th>
 									<th>Название</th>
+									<th>Дата</th>
 									<th>Количество постов</th>
+									<th>Просмотр</th>
 									<th>Редактировать</th>
 									<th>Удалить</th>
 								</tr>
 							</thead>
 							<tbody>
+								@foreach ($tags as $tag)
 								<tr>
-									<td>{{$category->id}}</td>
-									<td>{{$category->title}}</td>
+									<td>{{$tag->id}}</td>
+									<td>{{$tag->title}}</td>
+									<td>{{$tag->created_at}}</td>
 									<td><span class="tag tag-success">Потом будет к каким постам привязано</span></td>
-									<td><a href="{{route('admin.category.edit', $category->id)}}"><span style="color:#B2FF00;"><i class="m-3 fas fa-pen"></i></span></a></td>
+									<td><a href="{{route('admin.tag.show', $tag->id)}}"><span style="color:#CBE5FF;"><i class="far fa-eye"></i></span></a></td>
+									<td><a href="{{route('admin.tag.edit', $tag->id)}}"><span style="color:#B2FF00;"><i class="fas fa-pen"></i></span></a></td>
 									<td>
-										<form action="{{route('admin.category.delete',$category->id)}}" method="POST">
+										<form action="{{route('admin.tag.delete',$tag->id)}}" method="POST">
 											@csrf
 											@method('DELETE')
 											<button type="submit" class="border-0 bg-transparent">
@@ -43,9 +56,10 @@
 											</button>
 
 										</form>
-									</td>
 
+									</td>
 								</tr>
+								@endforeach
 							</tbody>
 						</table>
 					</div>

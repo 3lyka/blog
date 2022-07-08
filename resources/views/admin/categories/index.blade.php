@@ -33,6 +33,7 @@
 									<th>Название</th>
 									<th>Дата</th>
 									<th>Количество постов</th>
+									<th>Просмотр</th>
 									<th>Редактировать</th>
 									<th>Удалить</th>
 								</tr>
@@ -44,8 +45,19 @@
 									<td>{{$category->title}}</td>
 									<td>{{$category->created_at}}</td>
 									<td><span class="tag tag-success">Потом будет к каким постам привязано</span></td>
-									<td><a href="{{route('admin.category.show', $category->id)}}"><span style="color:white;"><i class="fas fa-pen"></i></span></a></td>
-									<td><a href="#"><span style="color:red;"><i class="fa-solid fa-trash-can"></i></span></a></td>
+									<td><a href="{{route('admin.category.show', $category->id)}}"><span style="color:#CBE5FF;"><i class="far fa-eye"></i></span></a></td>
+									<td><a href="{{route('admin.category.edit', $category->id)}}"><span style="color:#B2FF00;"><i class="fas fa-pen"></i></span></a></td>
+									<td>
+										<form action="{{route('admin.category.delete',$category->id)}}" method="POST">
+											@csrf
+											@method('DELETE')
+											<button type="submit" class="border-0 bg-transparent">
+												<span role="button" style="color:#FC4850;"><i class="fa-solid fa-trash-can"></i></span>
+											</button>
+
+										</form>
+
+									</td>
 								</tr>
 								@endforeach
 							</tbody>
