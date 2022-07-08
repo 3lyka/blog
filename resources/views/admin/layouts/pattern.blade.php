@@ -74,6 +74,7 @@
 	<script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
 	<!-- Bootstrap -->
 	<script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+	<script src="{{ asset('plugins/bs-custom-file-input/bs-custom-file-input.min.js') }}"></script>
 	<!-- overlayScrollbars -->
 	<script src="{{ asset('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
 	<!-- AdminLTE App -->
@@ -95,6 +96,10 @@
 					['height', ['height']]
 				]
 			});
+		});
+
+		$(function() {
+			bsCustomFileInput.init();
 		});
 	</script>
 </body>
