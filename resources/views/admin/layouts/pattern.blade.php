@@ -5,7 +5,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>{{ config('app.name', 'admin') }}/admin</title>
-
+	
+	<link rel="stylesheet" href="{{ asset('plugins/select2/css/select2.min.css') }}">
 	<!-- Google Font: Source Sans Pro -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
 	<!-- Font Awesome Icons -->
@@ -74,6 +75,7 @@
 	<script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
 	<!-- Bootstrap -->
 	<script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+	<script src="{{ asset('plugins/select2/js/select2.full.min.js') }}"></script>
 	<script src="{{ asset('plugins/bs-custom-file-input/bs-custom-file-input.min.js') }}"></script>
 	<!-- overlayScrollbars -->
 	<script src="{{ asset('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
@@ -98,6 +100,10 @@
 			});
 		});
 
+		$('.select2bs4').select2({
+			theme: 'bootstrap4'
+		})
+		$('.select2').select2()
 		$(function() {
 			bsCustomFileInput.init();
 		});
