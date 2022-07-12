@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>{{ config('app.name', 'admin') }}/admin</title>
-	
+
 	<link rel="stylesheet" href="{{ asset('plugins/select2/css/select2.min.css') }}">
 	<!-- Google Font: Source Sans Pro -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -27,7 +27,6 @@
 			<img class="animation__wobble" src="/images/logo.svg" alt="AdminPanelLogo" height="60" width="60">
 		</div>
 
-		<!-- Navbar -->
 		<nav class="main-header navbar navbar-expand navbar-dark">
 			<!-- Left navbar links -->
 			<ul class="navbar-nav">
@@ -39,7 +38,6 @@
 				</li>
 			</ul>
 
-			<!-- Right navbar links -->
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
 					<a class="nav-link" data-widget="fullscreen" href="#" role="button">
@@ -53,23 +51,19 @@
 				</li>
 			</ul>
 		</nav>
-		<!-- /.navbar -->
 
 
 		@include('admin.includes.sidebar')
 		@yield('content')
 
-		<!-- Control Sidebar -->
 		<aside class="control-sidebar control-sidebar-dark">
-			<!-- Control sidebar content goes here -->
 		</aside>
-		<!-- /.control-sidebar -->
 
-		<!-- Main Footer -->
-		<footer class="main-footer">
-			<strong>Гараев Вадим &copy; 2022</strong>
-		</footer>
 	</div>
+
+	<footer class="main-footer">
+		<strong>Гараев Вадим &copy; 2022</strong>
+	</footer>
 
 	<!-- jQuery -->
 	<script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>

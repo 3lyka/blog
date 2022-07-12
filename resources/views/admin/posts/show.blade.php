@@ -35,12 +35,12 @@
 									<td>{{$post->title}}</td>
 									<td>{{$post->content}}</td>
 									<td><span class="tag tag-success">Потом будет к каким категориям привязано</span></td>
-									<td><a href="{{route('admin.post.edit', $post->id)}}"><span style="color:#B2FF00;"><i class="m-3 fas fa-pen"></i></span></a></td>
+									<td><a class="p-0" href="{{route('admin.post.edit', $post->id)}}"><span style="color:#B2FF00;"><i class="m-3 fas fa-pen"></i></span></a></td>
 									<td>
 										<form action="{{route('admin.post.delete',$post->id)}}" method="POST">
 											@csrf
 											@method('DELETE')
-											<button type="submit" class="border-0 bg-transparent">
+											<button type="submit" class="border-0 bg-transparent p-0">
 												<span role="button" style="color:#FC4850;"><i class="m-3 fa-solid fa-trash-can"></i></span>
 											</button>
 

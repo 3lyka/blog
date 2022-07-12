@@ -38,7 +38,7 @@
 							<input type="text" class="form-control shadow" name="title" placeholder="Пост стулья">
 							@error('title')
 							<div class="text-danger">
-								Поле название нужно заполнить!
+							{{ $message }}
 							</div>
 							@enderror
 							<p class="fw-light">Текст поста</p>
@@ -62,7 +62,7 @@
 							</div>
 							@error('preview_image')
 							<div class="text-danger">
-								Поле превью изображение нужно заполнить!
+								{{ $message }}
 							</div>
 							@enderror
 						</div>
@@ -79,7 +79,7 @@
 							</div>
 							@error('main_image')
 							<div class="text-danger">
-								Поле основное изображение нужно заполнить!
+							{{ $message }}
 							</div>
 							@enderror
 						</div>

@@ -6,8 +6,8 @@
 		<div class="container-fluid">
 			<div class="row mb-2 ">
 				<div class="col-sm-12">
-					<h1 class="m-0">Редактирование категории</h1>
-					<h5 class="mt-2">{{$tag->title}}
+					<h1 class="m-0">Просмотр пользователя</h1>
+					<h5 class="mt-2">{{$user->name}}
 					</h5>
 				</div>
 			</div>
@@ -22,20 +22,20 @@
 							<thead>
 								<tr>
 									<th>ID</th>
-									<th>Название</th>
-									<th>Количество постов</th>
+									<th>Пользователь</th>
+									<th>email пользователя</th>
 									<th>Редактировать</th>
 									<th>Удалить</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>{{$tag->id}}</td>
-									<td>{{$tag->title}}</td>
-									<td><span class="tag tag-success">Потом будет к каким постам привязано</span></td>
-									<td><a class="p-0" href="{{route('admin.tag.edit', $tag->id)}}"><span style="color:#B2FF00;"><i class="m-3 fas fa-pen"></i></span></a></td>
+									<td>{{$user->id}}</td>
+									<td>{{$user->name}}</td>
+									<td>{{ $user->email }}</td>
+									<td><a href="{{route('admin.user.edit', $user->id)}}"><span style="color:#B2FF00;"><i class="m-3 fas fa-pen"></i></span></a></td>
 									<td>
-										<form action="{{route('admin.tag.delete',$tag->id)}}" method="POST">
+										<form action="{{route('admin.user.delete',$user->id)}}" method="POST">
 											@csrf
 											@method('DELETE')
 											<button type="submit" class="border-0 bg-transparent p-2">

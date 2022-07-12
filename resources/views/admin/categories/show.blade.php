@@ -33,12 +33,12 @@
 									<td>{{$category->id}}</td>
 									<td>{{$category->title}}</td>
 									<td><span class="tag tag-success">Потом будет к каким постам привязано</span></td>
-									<td><a href="{{route('admin.category.edit', $category->id)}}"><span style="color:#B2FF00;"><i class="m-3 fas fa-pen"></i></span></a></td>
+									<td><a class="p-0" href="{{route('admin.category.edit', $category->id)}}"><span style="color:#B2FF00;"><i class="m-3 fas fa-pen"></i></span></a></td>
 									<td>
 										<form action="{{route('admin.category.delete',$category->id)}}" method="POST">
 											@csrf
 											@method('DELETE')
-											<button type="submit" class="border-0 bg-transparent">
+											<button type="submit" class="border-0 bg-transparent p-2">
 												<span role="button" style="color:#FC4850;"><i class="fa-solid fa-trash-can"></i></span>
 											</button>
 
