@@ -140,7 +140,7 @@
 								</div>
 
 								<!-- skill item -->
-																<div class="skill-item">
+								<div class="skill-item">
 									<div class="skill-info clearfix">
 										<h4 class="float-left mb-3 mt-0">Project-manager</h4>
 										<span class="float-right">89%</span>
@@ -227,26 +227,28 @@
 
 			<div class="row blog-wrapper">
 
+				@foreach ($posts as $post)
 				<div class="col-md-4">
 					<!-- blog item -->
 					<div class="blog-item rounded bg-dark shadow-dark wow fadeIn">
 						<div class="thumb">
 							<a href="{{route('main.show')}}">
-								<span class="category">Category</span>
+								<span class="category">{{	$post->category->title	}}</span>
 							</a>
 							<a href="{{route('main.show')}}">
 								<img src="images/blog/1.svg" alt="blog-title" />
 							</a>
 						</div>
 						<div class="details">
-							<h4 class="my-0 title"><a href="{{route('main.show')}}">5 Best App Development Tool for Your Project</a></h4>
+							<h4 class="my-0 title"><a href="{{route('main.show', $post->id)}}">{{ $post->title }}</a></h4>
 							<ul class="list-inline meta mb-0 mt-2">
-								<li class="list-inline-item">09 February, 2020</li>
-								<li class="list-inline-item">Bolby</li>
+								<li class="list-inline-item">{{ $post->created_at }}</li>
 							</ul>
 						</div>
 					</div>
 				</div>
+				@endforeach
+
 			</div>
 
 		</div>

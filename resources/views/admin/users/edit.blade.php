@@ -36,6 +36,22 @@
 							</div>
 							@enderror
 						</div>
+						<div class="form-input m-2">
+							<input type="hidden" class="form-control shadow" name="user_id"  value="{{$user->id}}">
+						</div>
+						<div class="col-12 col-sm-6">
+						<p class="fw-light">Выберите роль </p>
+							<select name="role" class="form-control">
+								@foreach ($roles as $id => $role)
+								<option value="{{$id}}" {{ $id == $user->role ? ' selected':'' }}>{{ $role }}</option>
+								@endforeach
+							</select>
+							@error('role')
+							<div class="text-danger p-1">
+								{{ $message }}
+							</div>
+							@enderror
+						</div>
 						<input type="submit" class="btn btn-primary m-2 shadow-light" value="Обновить">
 					</form>
 				</div>

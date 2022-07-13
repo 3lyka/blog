@@ -36,18 +36,17 @@
 				<li class="nav-item d-none d-sm-inline-block">
 					<a href="{{route('admin.main.index')}}" class="nav-link">Главная</a>
 				</li>
+				<li class="nav-item d-none d-sm-inline-block">
+					<a href="{{route('main.index')}}" class="nav-link">Страница сайта</a>
+				</li>
 			</ul>
 
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
-					<a class="nav-link" data-widget="fullscreen" href="#" role="button">
-						<i class="fas fa-expand-arrows-alt"></i>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-						<i class="fas fa-th-large"></i>
-					</a>
+					<form action="{{route('logout')}}" method="POST">
+						@csrf
+						<input class="btn btn-dark border-0 m-0 text-white" type="submit" value="Выйти">
+					</form>
 				</li>
 			</ul>
 		</nav>

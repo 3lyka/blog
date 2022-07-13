@@ -9,7 +9,7 @@
 				<img src="/images/avatar-1.svg" class="img-circle elevation-2" alt="User Image">
 			</div>
 			<div class="info">
-				<p class="d-block">{{ $user->name }}</p>
+				<p class="d-block">Привет</p>
 			</div>
 		</div>
 		<nav class="mt-2">

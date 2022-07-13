@@ -8,7 +8,7 @@
 			<div class="row">
 				<div class="col-md-8">
 					<div class="blog-single blog-standard shadow-dark">
-						<h1 class="my-0">5 Best App Development Tool for Your Project</h1>
+						<h1 class="my-0">{{ $post->title }}</h1>
 						<ul class="list-inline unstyled meta mb-0 mt-3">
 							<li class="list-inline-item">28 February 2020</li>
 							<li class="list-inline-item"><a href="#" title="Posts by Bolby Doe" rel="author">Bolby

@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,10 +18,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['namespace' => 'Main'], function () {
 	Route::get('/', 'IndexController')->name('main.index');
-	Route::get('/show', 'ShowController')->name('main.show');
+	Route::get('/posts', 'ShowController')->name('main.show');
 });
 
-Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
+
+
+/* admin panel */
+
+Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => ['auth', 'admin']], function () {
 	Route::group(['namespace' => 'Main'], function () {
 		Route::get('/', 'IndexController')->name('admin.main.index');
 	});
@@ -63,3 +68,5 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
 		Route::delete('/{user}', 'DeleteController')->name('admin.user.delete');
 	});
 });
+
+Auth::routes();
