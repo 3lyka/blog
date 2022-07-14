@@ -21,11 +21,21 @@ Route::group(['namespace' => 'Main'], function () {
 	Route::get('/posts', 'ShowController')->name('main.show');
 });
 
-
+Route::group(['namespace' => 'Personal', 'prefix' => 'personal', 'middleware' => ['auth', 'verified']], function () {
+	Route::group(['namespace' => 'Main'], function () {
+		Route::get('/', 'IndexController')->name('personal.main.index');
+	});
+	Route::group(['namespace' => 'Liked'], function () {
+		Route::get('/liked', 'IndexController')->name('personal.liked.index');
+	});
+	Route::group(['namespace' => 'Comment'], function () {
+		Route::get('/comment', 'IndexController')->name('personal.comment.index');
+	});
+});
 
 /* admin panel */
 
-Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => ['auth', 'admin']], function () {
+Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => ['auth', 'admin', 'verified']], function () {
 	Route::group(['namespace' => 'Main'], function () {
 		Route::get('/', 'IndexController')->name('admin.main.index');
 	});
@@ -69,4 +79,4 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => ['aut
 	});
 });
 
-Auth::routes();
+Auth::routes(['verify' => true]);

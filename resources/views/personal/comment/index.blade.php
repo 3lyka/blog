@@ -1,4 +1,4 @@
-@extends('admin.layouts.pattern')
+@extends('personal.layouts.pattern')
 @section('content')
 
 <div class="content-wrapper">
@@ -19,11 +19,11 @@
 			<div class="row">
 				<div class="col-12 col-sm-6 col-md-3">
 					<div class="info-box mb-3">
-						<span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
+						<span class="info-box-icon bg-warning elevation-1"><i class="fas fa-heart"></i></span>
 
 						<div class="info-box-content">
-							<span class="info-box-text">Пользователи</span>
-							<span class="info-box-number">{{ $data['usersCount'] }}</span>
+							<span class="info-box-text">Нравится</span>
+							<span class="info-box-number">10</span>
 						</div>
 					</div>
 				</div>
@@ -34,18 +34,18 @@
 						<div class="info-box-content">
 							<span class="info-box-text">Посты</span>
 							<span class="info-box-number">
-							{{ $data['postsCount'] }}
+								10
 							</span>
 						</div>
 					</div>
 				</div>
 				<div class="col-12 col-sm-6 col-md-3">
 					<div class="info-box mb-3">
-						<span class="info-box-icon bg-danger elevation-1"><i class="fas fa-list-ul"></i></span>
+						<span class="info-box-icon bg-danger elevation-1"><i class="fas fa-comments"></i></span>
 
 						<div class="info-box-content">
-							<span class="info-box-text">Категории</span>
-							<span class="info-box-number">{{ $data['categoriesCount'] }}</span>
+							<span class="info-box-text">Комментарии</span>
+							<span class="info-box-number">10</span>
 						</div>
 					</div>
 				</div>
@@ -57,7 +57,7 @@
 
 						<div class="info-box-content">
 							<span class="info-box-text">Теги</span>
-							<span class="info-box-number">{{ $data['tagsCount'] }}</span>
+							<span class="info-box-number">13</span>
 						</div>
 					</div>
 				</div>
