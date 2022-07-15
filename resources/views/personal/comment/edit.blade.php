@@ -66,46 +66,28 @@
 		</div>
 	</section>
 
-	<section class="container-fluid">
-		<div class="row mt-5">
-			<div class="col-sm-6 col-md-12">
-				<div class="card">
-					<div class="card-body table-responsive p-0">
-						<table class="table table-hover align-middle">
-							<thead>
-								<tr>
-									<th>ID</th>
-									<th>Название</th>
-									<th>Контент</th>
-									<th>Дата</th>
-									<th>Просмотр</th>
-									<th>Удалить</th>
-								</tr>
-							</thead>
-							<tbody>
-								@foreach ($posts as $post)
-								<tr>
-									<td>{{$post->id}}</td>
-									<td>{{$post->title}}</td>
-									<td>{{$post->content}}</td>
-									<td>{{$post->created_at}}</td>
-									<td><a href="#"><span style="color:#CBE5FF;"><i class="far fa-eye"></i></span></a></td>
-									<td>
-										<form action="{{route('personal.liked.delete',$post->id)}}" method="POST">
-											@csrf
-											@method('DELETE')
-											<button type="submit" class="border-0 bg-transparent">
-												<span role="button" style="color:#FC4850;"><i class="fa-solid fa-trash-can"></i></span>
-											</button>
+	<section class="content ">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-12 col-md-6">
+					<p class="fw-light">Комментарий </p>
 
-										</form>
+					<form action="{{route('personal.comment.update',$comment->id )}}" method="POST">
+						@csrf
+						@method('PATCH')
+						<div class="form-input">
+							<div class="form-floating">
+								<textarea name="message" class="form-control" id="floatingTextarea2" style="height: 100px">{{$comment->message}}</textarea>
+							</div>
+							@error('message')
+							<div class="text-danger p-1">
+								Поле нужно заполнить!
+							</div>
+							@enderror
+						</div>
 
-									</td>
-								</tr>
-								@endforeach
-							</tbody>
-						</table>
-					</div>
+						<input type="submit" class="btn btn-primary mt-3 shadow-light" value="Обновить">
+					</form>
 				</div>
 			</div>
 		</div>

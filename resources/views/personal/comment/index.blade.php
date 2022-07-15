@@ -65,5 +65,54 @@
 			</div>
 		</div>
 	</section>
+
+	<section class="container-fluid">
+		<div class="row mt-5">
+			<div class="col-sm-6 col-md-12">
+				<div class="card">
+					<div class="card-body table-responsive p-0">
+						<table class="table table-hover align-middle">
+							<thead>
+								<tr>
+									<th>ID</th>
+									<th>Коммент</th>
+									<th>Дата</th>
+									<th>Просмотр</th>
+									<th>Удалить</th>
+								</tr>
+							</thead>
+							<tbody>
+								@foreach ($comments as $comment)
+								<tr>
+									<td>{{$comment->id}}</td>
+									<td>{{$comment->message}}</td>
+									<td>{{$comment->created_at}}</td>
+									<td><a href="{{route('personal.comment.edit', $comment->id)}}"><span style="color:#B2FF00;"><i class="fas fa-pen"></i></span></a></td>
+									<td>
+										<form action="{{route('personal.comment.delete',$comment->id)}}" method="POST">
+											@csrf
+											@method('DELETE')
+											<button type="submit" class="border-0 bg-transparent">
+												<span role="button" style="color:#FC4850;"><i class="fa-solid fa-trash-can"></i></span>
+											</button>
+
+										</form>
+
+									</td>
+								</tr>
+								@endforeach
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </div>
+<style>
+	td,
+	th {
+		text-align: center;
+	}
+</style>
 @endsection
