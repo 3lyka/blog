@@ -233,9 +233,9 @@
 					<div class="blog-item rounded bg-dark shadow-dark wow fadeIn">
 						<div class="thumb">
 							<a href="{{route('main.show')}}">
-								<span class="category">{{	$post->category->title	}}</span>
+								<span class="category">{{ $post->category->title	}}</span>
 							</a>
-							<a href="{{route('main.show')}}">
+							<a href="{{route('main.show', $post->id)}}">
 								<img src="images/blog/1.svg" alt="blog-title" />
 							</a>
 						</div>
@@ -243,11 +243,15 @@
 							<h4 class="my-0 title"><a href="{{route('main.show', $post->id)}}">{{ $post->title }}</a></h4>
 							<ul class="list-inline meta mb-0 mt-2">
 								<li class="list-inline-item">{{ $post->created_at }}</li>
+								<li class="list-inline-item">{{ $post->id }}</li>
 							</ul>
 						</div>
 					</div>
 				</div>
 				@endforeach
+				<div class="mt-5 pagination">
+					{{ $posts->links()   }}
+				</div>
 
 			</div>
 

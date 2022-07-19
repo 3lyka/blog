@@ -44,7 +44,7 @@
 									<td>{{$user->id}}</td>
 									<td>{{$user->name}}</td>
 									<td>{{$user->created_at}}</td>
-									<td><span class="user user-success">{{ $user->role }}</span></td>
+									<td><span class="user user-success">{{ $user->name }}</span></td>
 									<td><a href="{{route('admin.user.show', $user->id)}}"><span style="color:#CBE5FF;"><i class="far fa-eye"></i></span></a></td>
 									<td><a href="{{route('admin.user.edit', $user->id)}}"><span style="color:#B2FF00;"><i class="fas fa-pen"></i></span></a></td>
 									<td>

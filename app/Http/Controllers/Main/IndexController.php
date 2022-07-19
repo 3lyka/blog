@@ -9,11 +9,12 @@ use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
-	public function __invoke(Request $request)
+	public function __invoke()
 	{
-		
-		$posts = Post::all();
+
+		$posts = Post::paginate(6);
+		$likedPosts = Post::withCount('likedUsers')->orderBy('liked_users_count', 'DESC')->get();
 		$categories = Category::all();
-		return view('main.index', compact('posts', 'categories'));
+		return view('main.index', compact('posts', 'categories', 'likedPosts'));
 	}
 }

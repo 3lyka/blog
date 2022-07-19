@@ -48,7 +48,7 @@
 									<td>{{$post->content}}</td>
 									<td>{{$post->created_at}}</td>
 									<td><span class="tag tag-success">Посты</span></td>
-									<td>{{$post->category_id}}</td>
+									<td>{{$post->category->title}}</td>
 									<td><a href="{{route('admin.post.show', $post->id)}}"><span style="color:#CBE5FF;"><i class="far fa-eye"></i></span></a></td>
 									<td><a href="{{route('admin.post.edit', $post->id)}}"><span style="color:#B2FF00;"><i class="fas fa-pen"></i></span></a></td>
 									<td>
