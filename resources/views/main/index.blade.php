@@ -232,7 +232,7 @@
 					<!-- blog item -->
 					<div class="blog-item rounded bg-dark shadow-dark wow fadeIn">
 						<div class="thumb">
-							<a href="{{route('main.show')}}">
+							<a href="{{route('main.show', $post->id)}}">
 								<span class="category">{{ $post->category->title	}}</span>
 							</a>
 							<a href="{{route('main.show', $post->id)}}">

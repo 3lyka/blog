@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['namespace' => 'Main'], function () {
 	Route::get('/', 'IndexController')->name('main.index');
-	Route::get('/s', 'ShowController')->name('main.show');
+	Route::get('/{post}', 'ShowController')->name('main.show');
 });
 
 
