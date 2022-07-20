@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="Bolby - Portfolio/CV/Resume HTML Template">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
 	<link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}" type="text/css" media="all">
 	<link rel="stylesheet" href="{{asset('css/all.min.css')}}" type="text/css" media="all">
 	<link rel="stylesheet" href="{{asset('css/simple-line-icons.css')}}" type="text/css" media="all">
@@ -90,6 +90,7 @@
 				<li><a href="#blog"><i class="icon-note"></i></a></li>
 				<li><a href="#services"><i class="icon-briefcase"></i></a></li>
 				<li><a href="#experience"><i class="icon-graduation"></i></a></li>
+				<li><a href="{{ route('personal.main.index') }}"><i class="fas fa-address-card"></i></a></li>
 			</ul>
 		</nav>
 

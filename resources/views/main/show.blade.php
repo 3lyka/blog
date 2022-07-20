@@ -7,51 +7,67 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8">
+
 					<div class="blog-single blog-standard shadow-dark">
 						<h1 class="my-0">{{ $post->title }}</h1>
 						<ul class="list-inline unstyled meta mb-0 mt-3">
-							<li class="list-inline-item">28 February 2020</li>
-							<li class="list-inline-item"><a href="#" title="Posts by Bolby Doe" rel="author">Bolby
-									Doe</a></li>
-							<li class="list-inline-item"><a href="#">Reviews</a></li>
+							<li class="list-inline-item"> {{ $date->day }} </li>
+							<li class="list-inline-item">{{ $date->translatedFormat('F') }} </li>
+							<li class="list-inline-item">{{ $date->format('H:i') }} </li>
+							<li class="list-inline-item"> {{ $post->comments->count() }} комментариев </li>
 						</ul>
-						<div class="thumb-wrapper mt-4"><img src="images/blog/1-1.svg" alt=""></div>
+						@php
+						$image = '';
+						if($post->main_image) {
+						$image = 'storage/'. $post->main_image;
+						} else {
+						$image = 'storage/images/'. 'no_cart.png';
+						}
+						@endphp
+						<div class="thumb-wrapper mt-4"><img src="{{ asset($image) }}" alt=""></div>
 						<article>
 							<div class="clearfix my-4">
-								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
-									eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
-									montes, nascetur ridiculus mus.</p>
-								<p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
-									consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec,
-									vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
-									justo.</p>
-								<p>Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.
-									Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo
-									ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante,
-									dapibus in, viverra quis, feugiat a, tellus.</p>
-								<p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean
-									imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
-									Nam eget dui. Etiam rhoncus.</p>
-								<p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit
-									amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus
-									pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec
-									vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
-									eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.
-									Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue
-									velit cursus nunc.</p>
+								{!! $post->content !!}
 							</div>
 						</article>
+
+						<section>
+							<div class="comment-area-section clearfix">
+								<h3>{{ $post->comments->count() }} Comment Found</h3>
+								<div class="comment-inner-box mt-0">
+									@foreach ($post->comments as $comment)
+									<div class="comment-author-text">
+										<h4><a href="{{route('personal.comment.index')}}">{{ $comment->user->name }}</a></h4>
+										<span>{{ $date->day }}
+											{{ $date->translatedFormat('F') }}
+											{{ $date->format('H:i') }}</span>
+										<p>{{$comment->message}}</p>
+									</div>
+									@endforeach
+
+								</div>
+							</div>
+							@auth
+							<div class="comment-respond">
+								<h2 class="comment-reply-title">Оставить комментарий</h2>
+								<form action="{{ route('main.comment.store',$post->id) }}" method="post">
+									@csrf
+									<textarea name="message" cols="60" rows="8" maxlength="65525" required="required"></textarea>
+									<input type="submit" value="Отправить">
+								</form>
+							</div>
+						</section>
+						@endauth
+
 					</div>
 				</div>
-				<!-- /blog-post-content -->
 				<div class="col-md-4">
 					<div class="blog-side-bar">
 						<div class="widget bg-white rounded shadow-dark">
-							<h3 class="widget-header">Categories</h3>
+							<h3 class="widget-header">Категории</h3>
 							<ul>
-								<li class="cat-item cat-item-4"><a href="#">Business</a></li>
-								<li class="cat-item cat-item-6"><a href="#">Reviews</a></li>
-								<li class="cat-item cat-item-5"><a href="#">Tutorial</a></li>
+								<li class="cat-item cat-item-4"><a href="#">{{ $post->category->title }}</a></li>
+
 							</ul>
 						</div>
 					</div>

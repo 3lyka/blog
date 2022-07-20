@@ -228,15 +228,23 @@
 			<div class="row blog-wrapper">
 
 				@foreach ($posts as $post)
+				@php
+				$image = '';
+				if($post->preview_image) {
+				$image = 'storage/'. $post->preview_image;
+				} else {
+				$image = 'storage/images/'. 'no_cart.png';
+				}
+				@endphp
 				<div class="col-md-4">
 					<!-- blog item -->
 					<div class="blog-item rounded bg-dark shadow-dark wow fadeIn">
 						<div class="thumb">
 							<a href="{{route('main.show', $post->id)}}">
-								<span class="category">{{ $post->category->title	}}</span>
+								<span class="category">{{ $post->category->title}}</span>
 							</a>
 							<a href="{{route('main.show', $post->id)}}">
-								<img src="images/blog/1.svg" alt="blog-title" />
+								<img src="{{ $image }}" style="object-fit:cover ;max-height:220px;width:100%;" alt="blog-title" />
 							</a>
 						</div>
 						<div class="details">
@@ -245,6 +253,22 @@
 								<li class="list-inline-item">{{ $post->created_at }}</li>
 								<li class="list-inline-item">{{ $post->id }}</li>
 							</ul>
+							@auth
+							<form action="{{route('main.like.store',$post->id)}}" class="d-flex justify-content-end" method="post">
+								@csrf
+								<button type="submit" class="btn btn-transpared m-0 p-0">
+									@if (auth()->user()->LikedPosts->contains($post->id))
+									<i class="text-danger fas fa-heart"></i>
+									@else
+									<i class="text-white far fa-heart"></i>
+									@endif
+									
+							</button>
+								
+								<p class="m-2 p-0">{{$post->liked_users_count}}</p>
+							</form>
+							@endauth
+
 						</div>
 					</div>
 				</div>

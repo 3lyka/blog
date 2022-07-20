@@ -18,10 +18,24 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['namespace' => 'Main'], function () {
 	Route::get('/', 'IndexController')->name('main.index');
-	Route::get('/{post}', 'ShowController')->name('main.show');
+	Route::get('/posts/{post}', 'ShowController')->name('main.show');
+
+	Route::group(['namespace' => 'Comment', 'prefix' => '{post}/comments'], function () {
+		Route::post('/', 'StoreController')->name('main.comment.store');
+	});
+	Route::group(['namespace' => 'Like', 'prefix' => '{post}/likes'], function () {
+		Route::post('/', 'StoreController')->name('main.like.store');
+	});
 });
 
+Route::group(['namespace' => 'Category', 'prefix' => 'categories'], function () {
+	Route::get('/', 'IndexController')->name('category.index');
+	Route::group(['namespace' => 'Post', 'prefix' => '{category}/posts'], function () {
+		Route::get('/', 'IndexController')->name('category.post.index');
+	});
+});
 
+/* personal panel */
 Route::group(['namespace' => 'Personal', 'prefix' => 'personal', 'middleware' => ['auth', 'verified']], function () {
 	Route::group(['namespace' => 'Main'], function () {
 		Route::get('/', 'IndexController')->name('personal.main.index');

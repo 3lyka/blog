@@ -34,7 +34,7 @@
 						<div class="info-box-content">
 							<span class="info-box-text">Посты</span>
 							<span class="info-box-number">
-								10
+								{{ $data['postsCount'] }}
 							</span>
 						</div>
 					</div>
@@ -45,23 +45,11 @@
 
 						<div class="info-box-content">
 							<span class="info-box-text">Комментарии</span>
-							<span class="info-box-number">10</span>
+							<span class="info-box-number">{{ $data['commentCount'] }}</span>
 						</div>
 					</div>
 				</div>
 				<div class="clearfix hidden-md-up"></div>
-
-				<div class="col-12 col-sm-6 col-md-3">
-					<div class="info-box mb-3">
-						<span class="info-box-icon bg-success elevation-1"><i class="fas fa-tags"></i></span>
-
-						<div class="info-box-content">
-							<span class="info-box-text">Теги</span>
-							<span class="info-box-number">13</span>
-						</div>
-					</div>
-				</div>
-
 			</div>
 		</div>
 	</section>

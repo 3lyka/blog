@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="Bolby - Portfolio/CV/Resume HTML Template">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<link rel="shortcut icon" type="/image/x-icon" href="{{ asset('favicon.ico') }}">
 	<link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}" type="text/css" media="all">
 	<link rel="stylesheet" href="{{asset('css/all.min.css')}}" type="text/css" media="all">
 	<link rel="stylesheet" href="{{asset('css/simple-line-icons.css')}}" type="text/css" media="all">
@@ -65,7 +65,7 @@
 			<!-- logo image -->
 			<div class="site-logo">
 			<a href="{{route('main.index')}}">
-				<img src="images/logo-b-light.svg" alt="logoVadim" />
+				<img src="{{asset ('images/logo-b-light.svg') }}" alt="logoVadim" />
 			</a>
 		</div>
 		</div>
@@ -77,14 +77,22 @@
 		<!-- logo image -->
 		<div class="site-logo">
 			<a href="{{route('main.index')}}">
-				<img src="images/logo-b-light.svg" alt="logoVadim" />
+				<img src="{{asset ('images/logo-b-light.svg') }}" alt="logoVadim" />
 			</a>
 		</div>
 
 		<!-- main menu -->
 		<nav>
 			<ul class="vertical-menu scrollspy">
-				<li class="active"><a href="{{route('main.index')}}"><i class="icon-home"></i>Home</a></li>
+				<li class="active"><a href="{{route('main.index')}}"><i class="icon-home"></i>Главная страницу</a></li>
+				@auth
+				<li class="active"><a href="{{ route('personal.main.index') }}"><i class="fas fa-address-card"></i>Личный кабинет</a></li>
+				@endauth
+
+				@guest
+				<li class="active"><a href="{{ route('personal.main.index') }}"><i class="fas fa-address-card"></i>Войти</a></li>
+				@endguest
+				
 			</ul>
 		</nav>
 
