@@ -14,6 +14,7 @@ class Post extends Model
 	protected $guarded = false;
 
 	protected $withCount = ['LikedUsers'];
+	protected $witch = ['category'];
 
 	public function tags()
 	{
